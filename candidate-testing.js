@@ -6,14 +6,33 @@ const input = require('readline-sync');
 let candidateName = input.question ("What is your name?");
 console.log("Greetings" + candidateName + "!");
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
-let question = input.question ("Who was the first American woman in space? ");
-let correctAnswer = "Sally Ride";
-let candidateAnswer = question + "";
-let questions;
-let correctAnswers;
-let candidateAnswers;
-console.log("Your answer: " + candidateAnswer);
-console.log("Correct answer: " + correctAnswer);
+//let question = input.question ("Who was the first American woman in space? ");
+//let correctAnswer = "Sally Ride";
+//let candidateAnswer = questions + [];
+let questions = input.question [
+  ["Who was the first woman in space?"], 
+  ["True or false: 5 km == 5000 meters?"], 
+  ["(5+3)/2*10 = ?"], 
+  ["Given the array [8, 'orbit', 'Trajectory', 45] what entry is at index 2?"], 
+  ["What is the minimum crew size for the ISS?"]
+];
+
+let correctAnswers = [
+  ["Sally Ride"], 
+  true, 
+  40, 
+  "trajectory", 
+  3];
+let candidateAnswers = questions + "";
+  
+  if (candidateAnswers === correctAnswers) {
+  console.log("Correct!");
+} else {
+  console.log("Sorry! Try again");
+}
+
+console.log("Your answer: " + candidateAnswers);
+console.log("Correct answer: " + correctAnswers);
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
 
