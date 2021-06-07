@@ -48,5 +48,8 @@ function runProgram() {
 }
 
 module.exports = {
-  runProgram: runProgram
+  runProgram: runProgram,
+  askForName: askForName,
+  askQuestions: askQuestions,
+  gradeQuiz: gradeQuiz
 };
